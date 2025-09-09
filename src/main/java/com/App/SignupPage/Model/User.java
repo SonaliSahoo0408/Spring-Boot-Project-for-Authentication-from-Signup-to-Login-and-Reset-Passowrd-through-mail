@@ -34,6 +34,9 @@ public class User {
     @Email(message = "Email should be valid")
     @Column(unique = true)
     private String email;
+	
+	@Pattern(regexp = "^[6-9][0-9]{9}")
+	private String phoneNumber;
     
 	@NotBlank(message = "Password is required")
 	@Pattern(
